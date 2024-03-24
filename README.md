@@ -27,7 +27,7 @@ Each of these requirements is crucial to provide a comprehensive digital solutio
 
 
 ## Zadatak
-(U root repozitorija učitajte zadatak koji ste dobili i potom ovdje stavite link na njegovo otvaranje!)
+[Zadatak](https://github.com/foivz/pi2024-zadace-dsedlan22/blob/master/Documentation/User%20Requirements%20-%20SCVZ%20(1).pdf)
 
 ## Resursi
 (Zadaće je obvezno predati u obliku Wiki stranica na ovom repozitoriju. Slike i druge artefakte koje ćete koristiti na wiki stranicama smjestite u mapu dokumentacije u repozitoriju!)
