@@ -1,12 +1,11 @@
 # Naziv projekta
-(U redak iznad navedite naziv projekta koji ste dobili za analizu!)
-
+Customer satisfaction system at SCVZ student restaurant
 ## Podaci o studentu
 (Ispod promijenite samo drugi redak tablice!)
 
 Ime i prezime | E-mail adresa (FOI) | JMBAG | Github korisničko ime
 ------------  | ------------------- | ----- | ---------------------
-David Sedlan | dsedlan22@foi.hr | 000000000 | githubuser
+David Sedlan | dsedlan22@foi.hr | 0016158947 | dsedlan22
 
 
 ## Opis domene
