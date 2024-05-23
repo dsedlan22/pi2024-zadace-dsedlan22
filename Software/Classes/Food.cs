@@ -17,7 +17,7 @@ namespace CollegeRestraunt.classes
         }
         public TestnaMetoda()
         {
-            console.WriteLine("Dobar dan");
+            console.WriteLine("Radi");
         }
     }
 }
