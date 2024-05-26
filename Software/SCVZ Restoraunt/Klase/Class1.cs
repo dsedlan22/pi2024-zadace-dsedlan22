@@ -70,5 +70,33 @@ namespace SCVZ_Restoraunt.Klase
             konekcija.Close();
 
         }
+
+        public int RegistracijaProizvoda(string naziv, string kod, string cijena)
+        {
+            try
+            {
+                string query = "INSERT INTO Jela (NazivJela, KodJela, CijenaJela)  VALUES('" + naziv + "', '" + kod + "'," + cijena + "); ";
+                SqlCommand sqlCommand = new SqlCommand(query, konekcija);
+
+                SqlDataAdapter adapter = new SqlDataAdapter();
+                konekcija.Open();
+                jela.Add(new JeloClass(naziv, kod, cijena));
+                adapter.InsertCommand = sqlCommand;
+                adapter.InsertCommand.ExecuteNonQuery();
+                //konekcija.Close();
+
+                return 1;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return 0;
+            }
+            finally
+            {
+                konekcija.Close();
+
+            }
+        }
     }
 }
