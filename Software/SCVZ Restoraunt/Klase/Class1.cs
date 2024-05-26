@@ -122,5 +122,32 @@ namespace SCVZ_Restoraunt.Klase
             }
 
         }
+
+        public int AzurirajJelo(string naziv, string kod, string cijena, string Usporedba)
+        {
+            try
+            {
+                konekcija.Open();
+                string query = "UPDATE Jela SET NazivJela = '" + naziv + "', KodJela = '" + kod + "', CijenaJela = " + cijena + " WHERE KodJela = '" + Usporedba + "' ";
+                SqlCommand sqlCommand = new SqlCommand(query, konekcija);
+                Console.WriteLine(query);
+                SqlDataAdapter adapter = new SqlDataAdapter();
+                //konekcija.Open();
+                adapter.InsertCommand = sqlCommand;
+                adapter.InsertCommand.ExecuteNonQuery();
+
+                UcitavanjeJela();
+                konekcija.Close();
+
+                return 1;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                konekcija.Close();
+                return 0;
+            }
+
+        }
     }
 }
