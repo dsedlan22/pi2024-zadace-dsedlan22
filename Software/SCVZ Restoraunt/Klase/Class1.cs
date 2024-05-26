@@ -54,5 +54,21 @@ namespace SCVZ_Restoraunt.Klase
                 konekcija.Close();
             }
         }
+
+        private void UcitavanjeJela()
+        {
+            jela.Clear();
+            //konekcija.Open();
+            SqlCommand cmd = new SqlCommand("Select * from Jela", konekcija);
+            SqlDataReader reader;
+            reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                JeloClass novoJelo = new JeloClass(reader.GetValue(1).ToString(), reader.GetValue(2).ToString(), reader.GetValue(3).ToString());
+                jela.Add(novoJelo);
+            }
+            konekcija.Close();
+
+        }
     }
 }
