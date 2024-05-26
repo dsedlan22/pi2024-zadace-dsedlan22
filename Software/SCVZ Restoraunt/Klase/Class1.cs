@@ -213,5 +213,26 @@ namespace SCVZ_Restoraunt.Klase
                 return 0;
             }
         }
+
+        public int AzurirajStudenta(string naziv, string jmbag, string Usporedba)
+        {
+            try
+            {
+                konekcija.Open();
+                string query = "UPDATE Studenti SET ImeIPrezimeStudenta = '" + naziv + "', Jmbag='" + jmbag + "' WHERE Jmbag = '" + Usporedba + "' ";
+                SqlCommand sqlCommand = new SqlCommand(query, konekcija);
+
+                SqlDataAdapter adapter = new SqlDataAdapter();
+                adapter.InsertCommand = sqlCommand;
+                adapter.InsertCommand.ExecuteNonQuery();
+                UcitavanjeStudenata();
+                konekcija.Close();
+                return 1;
+            }
+            catch (System.Exception ex)
+            {
+                return 0;
+            }
+        }
     }
 }
