@@ -6,7 +6,7 @@ using System.Data.SqlClient;
 using CollegeRestraunt.classes;
 using System.Threading.Tasks;
 
-namespace SCVZ_Restoraunt.Klase
+namespace CollegeRestraunt.Klase
 {
     public class DBclass
     {
