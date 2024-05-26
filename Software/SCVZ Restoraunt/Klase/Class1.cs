@@ -149,5 +149,28 @@ namespace SCVZ_Restoraunt.Klase
             }
 
         }
+
+        public int ObrisiJelo(string Kod)
+        {
+            try
+            {
+                konekcija.Open();
+                string query = "DELETE FROM Jela WHERE KodJela = '" + Kod + "'";
+                SqlCommand sqlCommand = new SqlCommand(query, konekcija);
+                Console.WriteLine(query);
+                SqlDataAdapter adapter = new SqlDataAdapter();
+                adapter.InsertCommand = sqlCommand;
+                adapter.InsertCommand.ExecuteNonQuery();
+                UcitavanjeJela();
+                konekcija.Close();
+            }
+            catch (Exception ex)
+            {
+
+            }
+            return 1;
+        }
+
+
     }
 }
