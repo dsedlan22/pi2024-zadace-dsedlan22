@@ -98,5 +98,29 @@ namespace SCVZ_Restoraunt.Klase
 
             }
         }
+
+        public string InsertStudent(string ime, string jmbag)
+        {
+            //string ImeIPrezime, int Jmbag
+            try
+            {
+                //SqlConnection konekcija = new SqlConnection(Connection);
+                string query = "INSERT INTO Studenti (ImeIPrezimeStudenta, Jmbag) VALUES('" + ime + "', '" + jmbag + "'); ";
+                SqlCommand sqlCommand = new SqlCommand(query, konekcija);
+
+                SqlDataAdapter adapter = new SqlDataAdapter();
+                konekcija.Open();
+                adapter.InsertCommand = sqlCommand;
+                adapter.InsertCommand.ExecuteNonQuery();
+                konekcija.Close();
+                return "1";
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return ex.Message.ToString();
+            }
+
+        }
     }
 }
