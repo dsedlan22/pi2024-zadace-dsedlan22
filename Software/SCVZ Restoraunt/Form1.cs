@@ -42,5 +42,11 @@ namespace SCVZ_Restoraunt
             obrazac.ShowDialog();
             Console.WriteLine("Radi gumb");
         }
+
+        private void RegistracijaProizvoda_Click(object sender, EventArgs e)
+        {
+            RegistracijaProizvoda obrazac = new RegistracijaProizvoda(Klasa);
+            obrazac.ShowDialog();
+        }
     }
 }

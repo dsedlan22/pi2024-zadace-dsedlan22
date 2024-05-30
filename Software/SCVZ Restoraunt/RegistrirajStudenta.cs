@@ -31,14 +31,14 @@ namespace SCVZ_Restoraunt
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "" || textBox2.Text == "")
+            if (ImePrezime.Text == "" || textBox2.Text == "")
             {
                 MessageBox.Show("Unesi Cijelovite Podatke", "Ne radi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                Klasa.InsertStudent(textBox1.Text, textBox2.Text);
-                StudentClass noviStudent = new StudentClass(textBox1.Text, textBox2.Text);
+                Klasa.InsertStudent(ImePrezime.Text, textBox2.Text);
+                StudentClass noviStudent = new StudentClass(ImePrezime.Text, textBox2.Text);
                 Klasa.students.Add(noviStudent);
                 MessageBox.Show("Unesen je student", "Radi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -66,12 +66,12 @@ namespace SCVZ_Restoraunt
             ObrisiStudenta.Enabled = true;
             AzurirajStudenta.Enabled = true;
             textBox2.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
-            textBox1.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+            ImePrezime.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
         }
 
         private void AzurirajStudenta_Click(object sender, EventArgs e)
         {
-            Klasa.AzurirajStudenta(textBox1.Text, textBox2.Text, JmbagStudenta);
+            Klasa.AzurirajStudenta(ImePrezime.Text, textBox2.Text, JmbagStudenta);
             dataGridView1.Rows.Clear();
 
             foreach (StudentClass student in Klasa.students)
