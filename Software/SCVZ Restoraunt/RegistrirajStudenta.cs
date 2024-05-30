@@ -39,6 +39,8 @@ namespace SCVZ_Restoraunt
             {
                 Klasa.InsertStudent(ImePrezime.Text, textBox2.Text);
                 StudentClass noviStudent = new StudentClass(ImePrezime.Text, textBox2.Text);
+                dataGridView1 .Rows.Add(noviStudent.JMBAG, noviStudent.ImeIprezime);
+                dataGridView1.Refresh();
                 Klasa.students.Add(noviStudent);
                 MessageBox.Show("Unesen je student", "Radi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }

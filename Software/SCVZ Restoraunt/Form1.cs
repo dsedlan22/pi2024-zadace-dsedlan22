@@ -86,6 +86,7 @@ namespace SCVZ_Restoraunt
         private void UnosProizvoda_Click(object sender, EventArgs e)
         {
             int uneseno = 0;
+            
 
             if (UnosProizvoda.Text == "") MessageBox.Show("Unesi Cijelovite Podatke", "Ne radi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             Console.WriteLine("Uneseno je " + textBox1.Text);

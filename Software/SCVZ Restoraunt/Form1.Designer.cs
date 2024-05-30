@@ -39,6 +39,10 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,7 +59,7 @@
             // CijenaSuma
             // 
             this.CijenaSuma.AutoSize = true;
-            this.CijenaSuma.Location = new System.Drawing.Point(507, 204);
+            this.CijenaSuma.Location = new System.Drawing.Point(643, 225);
             this.CijenaSuma.Name = "CijenaSuma";
             this.CijenaSuma.Size = new System.Drawing.Size(44, 16);
             this.CijenaSuma.TabIndex = 1;
@@ -83,9 +87,9 @@
             // 
             // RegistracijaProizvoda
             // 
-            this.RegistracijaProizvoda.Location = new System.Drawing.Point(531, 279);
+            this.RegistracijaProizvoda.Location = new System.Drawing.Point(488, 279);
             this.RegistracijaProizvoda.Name = "RegistracijaProizvoda";
-            this.RegistracijaProizvoda.Size = new System.Drawing.Size(156, 23);
+            this.RegistracijaProizvoda.Size = new System.Drawing.Size(199, 23);
             this.RegistracijaProizvoda.TabIndex = 4;
             this.RegistracijaProizvoda.Text = "Registracija Proizvoda";
             this.RegistracijaProizvoda.UseVisualStyleBackColor = true;
@@ -103,14 +107,14 @@
             // 
             // BoxUnosStudenta
             // 
-            this.BoxUnosStudenta.Location = new System.Drawing.Point(391, 290);
+            this.BoxUnosStudenta.Location = new System.Drawing.Point(139, 147);
             this.BoxUnosStudenta.Name = "BoxUnosStudenta";
             this.BoxUnosStudenta.Size = new System.Drawing.Size(119, 22);
             this.BoxUnosStudenta.TabIndex = 6;
             // 
             // UnosProizvoda
             // 
-            this.UnosProizvoda.Location = new System.Drawing.Point(181, 188);
+            this.UnosProizvoda.Location = new System.Drawing.Point(139, 218);
             this.UnosProizvoda.Name = "UnosProizvoda";
             this.UnosProizvoda.Size = new System.Drawing.Size(136, 23);
             this.UnosProizvoda.TabIndex = 7;
@@ -120,7 +124,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(287, 219);
+            this.textBox1.Location = new System.Drawing.Point(127, 175);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(131, 22);
             this.textBox1.TabIndex = 8;
@@ -128,26 +132,65 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(446, 256);
+            this.label4.Location = new System.Drawing.Point(422, 225);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(44, 16);
+            this.label4.Size = new System.Drawing.Size(0, 16);
             this.label4.TabIndex = 9;
-            this.label4.Text = "label1";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(602, 363);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 16);
+            this.label3.Size = new System.Drawing.Size(52, 16);
             this.label3.TabIndex = 10;
-            this.label3.Text = "label1";
+            this.label3.Text = "Student";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(360, 225);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(56, 16);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "JMBAG:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(519, 225);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(93, 16);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Ukupna cijena";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(18, 175);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(101, 16);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Kod Proizvoda: ";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(26, 147);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(112, 16);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "JMBAG Studenta:";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox1);
@@ -180,5 +223,9 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }

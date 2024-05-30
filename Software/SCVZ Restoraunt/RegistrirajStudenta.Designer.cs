@@ -46,7 +46,7 @@
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(469, 150);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -62,7 +62,7 @@
             // 
             // ImePrezime
             // 
-            this.ImePrezime.Location = new System.Drawing.Point(409, 47);
+            this.ImePrezime.Location = new System.Drawing.Point(595, 73);
             this.ImePrezime.Name = "ImePrezime";
             this.ImePrezime.Size = new System.Drawing.Size(154, 22);
             this.ImePrezime.TabIndex = 2;

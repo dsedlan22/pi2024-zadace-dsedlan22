@@ -48,34 +48,34 @@
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(424, 150);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.UpdateJela);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(452, 96);
+            this.textBox1.Location = new System.Drawing.Point(516, 171);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(251, 22);
             this.textBox1.TabIndex = 1;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(481, 161);
+            this.textBox2.Location = new System.Drawing.Point(537, 216);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(221, 22);
             this.textBox2.TabIndex = 2;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(455, 208);
+            this.textBox3.Location = new System.Drawing.Point(511, 263);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(256, 22);
             this.textBox3.TabIndex = 3;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(502, 274);
+            this.button1.Location = new System.Drawing.Point(169, 318);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(157, 23);
             this.button1.TabIndex = 4;
@@ -85,7 +85,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(502, 320);
+            this.button2.Location = new System.Drawing.Point(169, 364);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 5;
@@ -95,7 +95,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(164, 238);
+            this.button3.Location = new System.Drawing.Point(32, 372);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 6;
@@ -105,7 +105,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(301, 274);
+            this.button4.Location = new System.Drawing.Point(169, 408);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 7;
@@ -115,10 +115,11 @@
             // 
             // PretraživanjeProizvodaTextBox
             // 
-            this.PretraživanjeProizvodaTextBox.Location = new System.Drawing.Point(401, 373);
+            this.PretraživanjeProizvodaTextBox.Location = new System.Drawing.Point(12, 185);
             this.PretraživanjeProizvodaTextBox.Name = "PretraživanjeProizvodaTextBox";
             this.PretraživanjeProizvodaTextBox.Size = new System.Drawing.Size(206, 22);
             this.PretraživanjeProizvodaTextBox.TabIndex = 8;
+            this.PretraživanjeProizvodaTextBox.TextChanged += new System.EventHandler(this.PretraživanjeProizvodaTextBox_TextChanged);
             // 
             // RegistracijaProizvoda
             // 
