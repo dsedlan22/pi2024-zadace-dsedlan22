@@ -88,7 +88,7 @@
             // 
             // ObrisiStudenta
             // 
-            this.ObrisiStudenta.Location = new System.Drawing.Point(295, 350);
+            this.ObrisiStudenta.Location = new System.Drawing.Point(12, 402);
             this.ObrisiStudenta.Name = "ObrisiStudenta";
             this.ObrisiStudenta.Size = new System.Drawing.Size(166, 37);
             this.ObrisiStudenta.TabIndex = 5;
@@ -140,7 +140,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "RegistrirajStudenta";
-            this.Text = "RegistrirajStudenta";
+            this.Text = "Registracija Studenta";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

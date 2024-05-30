@@ -101,7 +101,7 @@
             // 
             this.button3.Location = new System.Drawing.Point(15, 393);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(140, 32);
+            this.button3.Size = new System.Drawing.Size(155, 32);
             this.button3.TabIndex = 6;
             this.button3.Text = "Ažuriranje Proizvoda";
             this.button3.UseVisualStyleBackColor = true;
@@ -111,7 +111,7 @@
             // 
             this.button4.Location = new System.Drawing.Point(15, 444);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(140, 32);
+            this.button4.Size = new System.Drawing.Size(155, 32);
             this.button4.TabIndex = 7;
             this.button4.Text = "Brisanje Proizvoda";
             this.button4.UseVisualStyleBackColor = true;
@@ -184,6 +184,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "RegistracijaProizvoda";
             this.Text = "RegistracijaProizvoda";
+            this.Load += new System.EventHandler(this.RegistracijaProizvoda_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

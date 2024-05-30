@@ -85,6 +85,12 @@ namespace SCVZ_Restoraunt
 
         private void UnosProizvoda_Click(object sender, EventArgs e)
         {
+            if (UnesenStudent == 0)
+            {
+                MessageBox.Show("Student nije unesen. Molimo unesite studenta prije unosa proizvoda.", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             int uneseno = 0;
             
 

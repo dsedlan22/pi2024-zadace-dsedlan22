@@ -66,12 +66,37 @@ namespace SCVZ_Restoraunt
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Klasa.AzurirajJelo(textBox1.Text, textBox2.Text, textBox3.Text, KodProizvoda);
-            dataGridView1.Rows.Clear();
-            dataGridView1.Refresh();
-            foreach (JeloClass jelo in Klasa.jela)
+            // Provjerite jesu li svi TextBox ispunjeni
+            if (string.IsNullOrEmpty(textBox1.Text) || string.IsNullOrEmpty(textBox2.Text) || string.IsNullOrEmpty(textBox3.Text))
             {
-                dataGridView1.Rows.Add(jelo.Kod, jelo.Naziv, jelo.Cijena);
+                MessageBox.Show("Unesi Cijelovite Podatke", "Ne radi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Provjerite je li cijena ispravno unesena kao decimalni broj
+            if (!decimal.TryParse(textBox3.Text, out decimal cijena))
+            {
+                MessageBox.Show("Unesi ispravnu cijenu", "Ne radi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Ažuriraj proizvod i provjeri je li ažuriranje uspješno
+            int rezultat = Klasa.AzurirajJelo(textBox1.Text, textBox2.Text, cijena.ToString(), KodProizvoda);
+            if (rezultat == 1)
+            {
+                // Osvježi DataGridView ako je ažuriranje uspješno
+                dataGridView1.Rows.Clear();
+                dataGridView1.Refresh();
+                foreach (JeloClass jelo in Klasa.jela)
+                {
+                    dataGridView1.Rows.Add(jelo.Kod, jelo.Naziv, jelo.Cijena);
+                }
+                MessageBox.Show("Proizvod je ažuriran", "Operacija je uspješna", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                // Obavijesti korisnika ako ažuriranje nije uspjelo
+                MessageBox.Show("Došlo je do greške prilikom ažuriranja", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -116,6 +141,11 @@ namespace SCVZ_Restoraunt
         }
 
         private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RegistracijaProizvoda_Load(object sender, EventArgs e)
         {
 
         }

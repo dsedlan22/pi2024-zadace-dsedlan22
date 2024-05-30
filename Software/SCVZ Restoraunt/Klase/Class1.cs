@@ -5,6 +5,7 @@ using System.Text;
 using System.Data.SqlClient;
 using SCVZ_Restoraunt.classes;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace SCVZ_Restoraunt.Klase
 {
@@ -128,12 +129,21 @@ namespace SCVZ_Restoraunt.Klase
             try
             {
                 konekcija.Open();
-                string query = "UPDATE Jela SET NazivJela = '" + naziv + "', KodJela = '" + kod + "', CijenaJela = " + cijena + " WHERE KodJela = '" + Usporedba + "' ";
+
+                // Parsiranje cijene u decimalni format
+                if (!decimal.TryParse(cijena, out decimal decimalCijena))
+                {
+                    MessageBox.Show("Unesi ispravnu cijenu", "Ne radi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return 0;
+                }
+                //promjena 2
+                string query = $"UPDATE Jela SET NazivJela = '{naziv}', KodJela = '{kod}', CijenaJela = {decimalCijena.ToString(System.Globalization.CultureInfo.InvariantCulture)} WHERE KodJela = '{Usporedba}'";
                 SqlCommand sqlCommand = new SqlCommand(query, konekcija);
                 Console.WriteLine(query);
-                SqlDataAdapter adapter = new SqlDataAdapter();
-                //konekcija.Open();
-                adapter.InsertCommand = sqlCommand;
+                SqlDataAdapter adapter = new SqlDataAdapter
+                {
+                    InsertCommand = sqlCommand
+                };
                 adapter.InsertCommand.ExecuteNonQuery();
 
                 UcitavanjeJela();
