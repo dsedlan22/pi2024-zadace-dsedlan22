@@ -16,6 +16,7 @@ namespace SCVZ_Restoraunt
     public partial class RegistracijaProizvoda : Form
     {
         DBclass Klasa;
+        float suma;
         private string KodProizvoda;
         public RegistracijaProizvoda(DBclass klasa)
         {
@@ -108,5 +109,7 @@ namespace SCVZ_Restoraunt
                 }
             }
         }
+
+        
     }
 }
