@@ -4,9 +4,11 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SCVZ_Restoraunt.classes;
 using SCVZ_Restoraunt.Klase;
 
 
@@ -47,6 +49,37 @@ namespace SCVZ_Restoraunt
         {
             RegistracijaProizvoda obrazac = new RegistracijaProizvoda(Klasa);
             obrazac.ShowDialog();
+        }
+
+        private void UnosStudenta_Click(object sender, EventArgs e)
+        {
+            if (BoxUnosStudenta.Text == "")
+            {
+                MessageBox.Show("Unesi Cijelovite Podatke", "Ne radi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                foreach (StudentClass student in Klasa.students)
+                {
+                    //Console.WriteLine("Student "+student.ImeIprezime.ToString() + "jmbag njegov" + student.JMBAG + "Jmbag Unese:" + BoxUnosStudenta.Text);
+                    if (student.ImeIprezime == BoxUnosStudenta.Text)
+                    {
+
+                        MessageBox.Show("Procitan Student", "Radi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        UnosProizvoda.Enabled = true;
+                        label4.Text = student.ImeIprezime;
+                        label3.Text = student.JMBAG;
+                        UnesenStudent = 1;
+                        break;
+
+
+                    }
+                }
+                if (UnesenStudent == 0)
+                {
+                    MessageBox.Show("Ne postoji taj student", "Ne radi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
     }
 }

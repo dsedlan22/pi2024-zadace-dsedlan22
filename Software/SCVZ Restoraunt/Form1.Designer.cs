@@ -33,6 +33,7 @@
             this.IzlazGumb = new System.Windows.Forms.Button();
             this.RegistracijaStudenta = new System.Windows.Forms.Button();
             this.RegistracijaProizvoda = new System.Windows.Forms.Button();
+            this.UnosStudenta = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -85,11 +86,22 @@
             this.RegistracijaProizvoda.UseVisualStyleBackColor = true;
             this.RegistracijaProizvoda.Click += new System.EventHandler(this.RegistracijaProizvoda_Click);
             // 
+            // UnosStudenta
+            // 
+            this.UnosStudenta.Location = new System.Drawing.Point(411, 341);
+            this.UnosStudenta.Name = "UnosStudenta";
+            this.UnosStudenta.Size = new System.Drawing.Size(75, 23);
+            this.UnosStudenta.TabIndex = 5;
+            this.UnosStudenta.Text = "Unos Studenta";
+            this.UnosStudenta.UseVisualStyleBackColor = true;
+            this.UnosStudenta.Click += new System.EventHandler(this.UnosStudenta_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.UnosStudenta);
             this.Controls.Add(this.RegistracijaProizvoda);
             this.Controls.Add(this.RegistracijaStudenta);
             this.Controls.Add(this.IzlazGumb);
@@ -110,5 +122,6 @@
         private System.Windows.Forms.Button IzlazGumb;
         private System.Windows.Forms.Button RegistracijaStudenta;
         private System.Windows.Forms.Button RegistracijaProizvoda;
+        private System.Windows.Forms.Button UnosStudenta;
     }
 }
