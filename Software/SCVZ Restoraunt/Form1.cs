@@ -56,7 +56,7 @@ namespace SCVZ_Restoraunt
         {
             if (BoxUnosStudenta.Text == "")
             {
-                MessageBox.Show("Unesi Cijelovite Podatke", "Ne radi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Unesi Cijelovite Podatke", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -66,7 +66,7 @@ namespace SCVZ_Restoraunt
                     if (student.ImeIprezime == BoxUnosStudenta.Text)
                     {
 
-                        MessageBox.Show("Procitan Student", "Radi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Unesen Student", "Radi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         UnosProizvoda.Enabled = true;
                         label4.Text = student.ImeIprezime;
                         label3.Text = student.JMBAG;
@@ -78,7 +78,7 @@ namespace SCVZ_Restoraunt
                 }
                 if (UnesenStudent == 0)
                 {
-                    MessageBox.Show("Ne postoji taj student", "Ne radi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Ne postoji taj student", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -94,7 +94,7 @@ namespace SCVZ_Restoraunt
             int uneseno = 0;
             
 
-            if (UnosProizvoda.Text == "") MessageBox.Show("Unesi Cijelovite Podatke", "Ne radi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            if (UnosProizvoda.Text == "") MessageBox.Show("Unesi Cijelovite Podatke", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
             Console.WriteLine("Uneseno je " + textBox1.Text);
             foreach (JeloClass jelo in Klasa.jela)
             {

@@ -66,14 +66,14 @@ namespace SCVZ_Restoraunt
 
         private void button3_Click(object sender, EventArgs e)
         {
-            // Provjerite jesu li svi TextBox ispunjeni
+            // Provjera jesu li svi TextBox ispunjeni
             if (string.IsNullOrEmpty(textBox1.Text) || string.IsNullOrEmpty(textBox2.Text) || string.IsNullOrEmpty(textBox3.Text))
             {
                 MessageBox.Show("Unesi Cijelovite Podatke", "Ne radi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            // Provjerite je li cijena ispravno unesena kao decimalni broj
+            // Provjera je li cijena ispravno unesena kao decimalni broj
             if (!decimal.TryParse(textBox3.Text, out decimal cijena))
             {
                 MessageBox.Show("Unesi ispravnu cijenu", "Ne radi", MessageBoxButtons.OK, MessageBoxIcon.Error);
