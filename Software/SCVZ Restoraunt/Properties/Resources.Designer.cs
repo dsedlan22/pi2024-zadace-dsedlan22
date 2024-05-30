@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CollegeRestraunt.Properties
+namespace SCVZ_Restoraunt.Properties
 {
 
 

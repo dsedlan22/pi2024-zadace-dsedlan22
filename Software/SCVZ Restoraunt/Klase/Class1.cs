@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Data.SqlClient;
-using CollegeRestraunt.classes;
+using SCVZ_Restoraunt.classes;
 using System.Threading.Tasks;
 
-namespace CollegeRestraunt.Klase
+namespace SCVZ_Restoraunt.Klase
 {
     public class DBclass
     {
