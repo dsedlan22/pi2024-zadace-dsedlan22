@@ -82,5 +82,10 @@ namespace SCVZ_Restoraunt
             }
             dataGridView1.Refresh();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
