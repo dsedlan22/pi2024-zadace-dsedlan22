@@ -1,5 +1,3 @@
-
-```markdown
 # Naručivanje Hrane
 
 Prilikom pokretanja programa se nalazi prozor za naručivanje hrane. Prvo se mora unijeti JMBAG studenta kako bi se mogli naručivati proizvodi. Ukoliko nemate JMBAG studenta, kliknite na glavnom prozoru na gumb „Registracija Studenta“.
