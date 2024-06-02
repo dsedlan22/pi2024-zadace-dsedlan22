@@ -33,7 +33,7 @@ namespace SCVZ_Restoraunt
         {
             if (ImePrezime.Text == "" || textBox2.Text == "")
             {
-                MessageBox.Show("Unesi Cijelovite Podatke", "Ne radi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Unesi Cijelovite Podatke", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -42,7 +42,7 @@ namespace SCVZ_Restoraunt
                 dataGridView1 .Rows.Add(noviStudent.JMBAG, noviStudent.ImeIprezime);
                 dataGridView1.Refresh();
                 Klasa.students.Add(noviStudent);
-                MessageBox.Show("Unesen je student", "Radi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Student je uspješno registriran u sustav", "Uspješna registracija studenta", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 

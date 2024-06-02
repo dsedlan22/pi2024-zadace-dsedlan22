@@ -35,7 +35,7 @@ namespace SCVZ_Restoraunt
         {
             if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "")
             {
-                MessageBox.Show("Unesi Cijelovite Podatke", "Ne radi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Unesi Cijelovite Podatke", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -69,14 +69,14 @@ namespace SCVZ_Restoraunt
             // Provjera jesu li svi TextBox ispunjeni
             if (string.IsNullOrEmpty(textBox1.Text) || string.IsNullOrEmpty(textBox2.Text) || string.IsNullOrEmpty(textBox3.Text))
             {
-                MessageBox.Show("Unesi Cijelovite Podatke", "Ne radi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Unesi Cijelovite Podatke", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
             // Provjera je li cijena ispravno unesena kao decimalni broj
             if (!decimal.TryParse(textBox3.Text, out decimal cijena))
             {
-                MessageBox.Show("Unesi ispravnu cijenu", "Ne radi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Unesi ispravnu cijenu", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -91,7 +91,7 @@ namespace SCVZ_Restoraunt
                 {
                     dataGridView1.Rows.Add(jelo.Kod, jelo.Naziv, jelo.Cijena);
                 }
-                MessageBox.Show("Proizvod je ažuriran", "Operacija je uspješna", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Proizvod je ažuriran", "Uspješno ažuriranje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
             {
@@ -141,11 +141,6 @@ namespace SCVZ_Restoraunt
         }
 
         private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void RegistracijaProizvoda_Load(object sender, EventArgs e)
         {
 
         }

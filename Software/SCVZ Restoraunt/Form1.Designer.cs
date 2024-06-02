@@ -44,6 +44,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.btnNaruci = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,6 +55,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.dataGridView1.Size = new System.Drawing.Size(475, 165);
             this.dataGridView1.TabIndex = 0;
             // 
@@ -194,11 +196,22 @@
             this.label9.TabIndex = 17;
             this.label9.Text = "Uneseni Student:";
             // 
+            // btnNaruci
+            // 
+            this.btnNaruci.Location = new System.Drawing.Point(15, 482);
+            this.btnNaruci.Name = "btnNaruci";
+            this.btnNaruci.Size = new System.Drawing.Size(206, 32);
+            this.btnNaruci.TabIndex = 18;
+            this.btnNaruci.Text = "Naruci";
+            this.btnNaruci.UseVisualStyleBackColor = true;
+            this.btnNaruci.Click += new System.EventHandler(this.btnNaruci_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(510, 550);
+            this.Controls.Add(this.btnNaruci);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -242,5 +255,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button btnNaruci;
     }
 }

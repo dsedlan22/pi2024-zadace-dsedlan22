@@ -31,6 +31,7 @@ namespace SCVZ_Restoraunt
             dataGridView1.Columns.Add("naziv", "Naziv Artikla");
             dataGridView1.Columns.Add("cijena", "Cijena Artikla");
             CijenaSuma.Text = "0";
+
         }
 
         private void IzlazGumb_Click(object sender, EventArgs e)
@@ -66,7 +67,7 @@ namespace SCVZ_Restoraunt
                     if (student.ImeIprezime == BoxUnosStudenta.Text)
                     {
 
-                        MessageBox.Show("Unesen Student", "Radi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Student je uspješno unesen u sustav", "Uspješan unos studenta", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         UnosProizvoda.Enabled = true;
                         label4.Text = student.ImeIprezime;
                         label3.Text = student.JMBAG;
@@ -109,11 +110,11 @@ namespace SCVZ_Restoraunt
             }
             if (uneseno == 0)
             {
-                MessageBox.Show("Ne postoji taj proizvod", "Ne radi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ne postoji taj proizvod", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                MessageBox.Show("Procitan Proizvod", "Radi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Proizvod je uspješno unesen", "Uspješan unos", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
         }
@@ -141,6 +142,17 @@ namespace SCVZ_Restoraunt
         private void label8_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnNaruci_Click(object sender, EventArgs e)
+        {
+            // Prikaz poruke o uspješnoj narudžbi
+            MessageBox.Show("Uspješno ste naručili svoje proizvode.", "Narudžba uspješna", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            // Resetiranje DataGridView za ponovnu kupnju
+            dataGridView1.Rows.Clear();
+            suma = 0;
+            CijenaSuma.Text = suma.ToString();
         }
     }
 }

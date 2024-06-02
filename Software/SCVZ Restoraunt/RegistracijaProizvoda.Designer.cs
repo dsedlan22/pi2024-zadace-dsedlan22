@@ -184,7 +184,6 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "RegistracijaProizvoda";
             this.Text = "RegistracijaProizvoda";
-            this.Load += new System.EventHandler(this.RegistracijaProizvoda_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
