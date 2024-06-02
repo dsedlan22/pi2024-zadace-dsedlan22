@@ -1,7 +1,4 @@
 
-#### Primjer `README.md`
-Evo cijeli primjer `README.md` datoteke za tvoj projekt:
-
 ```markdown
 # Naručivanje Hrane
 
