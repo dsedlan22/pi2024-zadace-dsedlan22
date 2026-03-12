@@ -27,7 +27,7 @@ Each of these requirements is crucial to provide a comprehensive digital solutio
 
 
 ## Zadatak
-[Customer satisfaction system at SCVZ student restaurant](https://github.com/foivz/pi2024-zadace-dsedlan22/blob/master/Documentation/User%20Requirements%20-%20SCVZ%20(1).pdf)
+[User Requirements - SCVZ](Documentation/User%20Requirements%20-%20SCVZ%20(1).pdf)
 
 ## Resursi
 Svi resursi nalaze se u mapi _Documentation_.
